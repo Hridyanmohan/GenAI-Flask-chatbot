@@ -1,0 +1,13 @@
+# Ignore the Python virtual environment files
+venv/
+.venv/
+__pycache__/
+*.pyc
+
+# Ignore your local SQLite database data and secret keys
+chat_history.db
+.env
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db

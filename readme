@@ -1,0 +1,4 @@
+pip install langchain-groq
+pip install langchain-groq langchain-core pydantic python-dotenv
+python llm_test.py
+python app.py

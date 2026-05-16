@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarvam Maya</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+
+    <div class="app-layout">
+        
+        <aside class="sidebar">
+            <button id="newChatBtn" class="new-chat-btn">
+                <span>+ New chat</span>
+            </button>
+            <div class="history-section">
+                <p class="history-heading">Recent Conversations</p>
+                <div id="historyList" class="history-list">
+                    </div>
+            </div>
+        </aside>
+
+        <div class="gemini-wrapper">
+            <header class="top-nav">
+                <div class="nav-left">
+                    <span class="brand-text">Sarvam Maya <span class="model-badge">Flash</span></span>
+                </div>
+            </header>
+
+            <main class="chat-viewport">
+                <div id="welcomeScreen" class="gemini-welcome">
+                    <h1 class="greeting-text">Hello, I'm Maya!</h1>
+                    <p class="subtitle-text">How can I help you be more productive today?</p>
+                </div>
+
+                <div id="messagesContainer" class="conversation-stream"></div>
+                
+                <div id="loadingIndicator" class="gemini-loading" style="display: none;">
+                    <div class="pulse-line"></div>
+                </div>
+                <div id="messagesEnd"></div>
+            </main>
+
+            <footer class="input-container-dock">
+                <form id="chatForm" class="omnibox-form">
+                    <div class="model-selector-pill">
+                        <select id="modelSelect">
+                            <option value="llama">Llama 3.3</option>
+                            <option value="mistral">Llama 3.1 (Fast)</option>
+                            <option value="granite">Gemma 2</option>
+                        </select>
+                    </div>
+                    <div class="input-row">
+                        <textarea id="messageInput" placeholder="Ask Sarvam Maya..." rows="1" required></textarea>
+                        <button type="submit" id="sendButton" class="gemini-send-btn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                <line x1="22" y1="2" x2="11" y2="13"></line>
+                                <polygon points="22,2 15,22 11,13 2,9 22,2"></polygon>
+                            </svg>
+                        </button>
+                    </div>
+                </form>
+                <div class="legal-disclaimer">Sarvam Maya provides quick, abbreviated analysis metrics layout.</div>
+            </footer>
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
